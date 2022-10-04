@@ -1,4 +1,5 @@
 #include "graphics.h"
+#include "common.h"
 
 sf::RenderWindow window;
 sf::Event event;
@@ -25,7 +26,7 @@ void graphics::check_event() {
 }
 
 
-void graphics::put_pixels(int **display_info) {
+void graphics::put_pixels(int display_info[ROW][COL]) {
     sf::Color color;
     for(int y = 0; y < ROW; ++y) {
         for(int x = 0; x < COL; ++x) {
@@ -58,7 +59,7 @@ int window_is_open() {
     return graphics::window_is_open();
 }
 
-void put_pixels(int **display_info) {
+void put_pixels(int display_info[ROW][COL]) {
     graphics::put_pixels(display_info);
 }
 
