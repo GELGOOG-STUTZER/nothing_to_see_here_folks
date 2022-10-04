@@ -1,8 +1,9 @@
 #include "logic.h"
 #include "common.h"
-#include "stdlib.h"
+
 
 void recalc(int a[ROW][COL], int b[ROW][COL]) {
+    put_pixels(a);
     int neighbour_live_cell;
     for(int i=0; i<ROW; i++){
         for(int j=0;j<COL;j++){
@@ -44,7 +45,7 @@ void init_pixels(int a[ROW][COL]) {
     int i,j;
     for(i=0; i<ROW; i++){
         for(j=0;j<COL;j++){
-            if (rand() % 2 == 0) { // NOLINT(cert-msc50-cpp)
+            if ((i + j) % 3 == 0) { // NOLINT(cert-msc50-cpp)
                 a[i][j] = 1;
             }
             else {

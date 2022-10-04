@@ -1,5 +1,5 @@
 #include "graphics.h"
-#include "logic.h"
+#include "logic.c"
 #include "common.h"
 
 int main(){
@@ -11,7 +11,6 @@ int main(){
 
     while (window_is_open()) {
         window_clear();
-        put_pixels(a);
         recalc(a, b);
         check_event();
         flush();

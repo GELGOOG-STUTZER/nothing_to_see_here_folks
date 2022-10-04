@@ -1,2 +1,2 @@
-#define ROW 400
-#define COL 400
+#define ROW 500
+#define COL 500
