@@ -25,24 +25,16 @@ void check_event() {
     }
 }
 
-void draw_pixel(int x, int y, sf::Color color) {
+void put_pixel(int x, int y, int status) {
+    sf::Color color;
+    if(status == 1) {
+        color = sf::Color(0, 255, 0, 255);
+    }
+    else {
+        color = sf::Color();
+    }
     sf::Vertex point({static_cast<float>(x), static_cast<float>(y)}, color);
     window.draw(&point, 1, sf::Points);
-}
-
-void put_pixels(int display_info[ROW][COL]) {
-    sf::Color color;
-    for(int y = 0; y < ROW; ++y) {
-        for(int x = 0; x < COL; ++x) {
-            if(display_info[x][y] == 1) {
-                color = sf::Color(0, 255, 0, 255);
-            }
-            else {
-                color = sf::Color();
-            }
-            draw_pixel(x, y, color);
-        }
-    }
 }
 
 void flush() {
