@@ -1,3 +1,6 @@
+// export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
+// export LIBGL_ALWAYS_INDIRECT=0
+// clang++ graphics.cpp ir_gen.ll -o program.out -lsfml-graphics -lsfml-window -lsfml-system
 #include <iostream>
 #include <fstream>
 #include <unordered_map>
