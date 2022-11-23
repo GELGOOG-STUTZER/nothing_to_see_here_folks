@@ -1,0 +1,5 @@
+lex l.lex
+bison -d grammar.y
+cmake ./
+make
+cat test1.shlang | ./compile

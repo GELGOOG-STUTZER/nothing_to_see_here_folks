@@ -1,0 +1,20 @@
+int a[5] = 0;
+int b = 3;
+int i = 0;
+
+int test(int z)
+{
+    return z + z;
+}
+
+int main()
+{
+      if b > 0 | skip1 |skip2;
+      skip1:
+      a[0] = 2;
+      a[1] = test(b);
+      skip2:
+      a[2] = test(b);
+
+return 0;
+}
