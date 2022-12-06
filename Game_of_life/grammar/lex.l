@@ -31,14 +31,21 @@ extern "C" int yylex();
 ","                     { printf("TCOMMA\n");  return TCOMMA;}
 
 
-"return"                { printf("TRETURN\n");   return TRETURN;}
-"if"                    { printf("TIF\n");       return TIF; }
-"while"                 { printf("TWHILE\n");    return TWHILE; }
-"for"                   { printf("TFOR\n");      return TFOR; }
-"int"                   { printf("TTYPE INT\n"); return TTYPE;}
-"void"                  { printf("TTYPE VOID\n");return TTYPE;}
-"start"                 { printf("TSTART\n");    return TSTART;}
-"finish"                { printf("TFINISH\n");   return TFINISH;}
+"return"                { printf("TRETURN\n");        return TRETURN;}
+"if"                    { printf("TIF\n");            return TIF; }
+"while"                 { printf("TWHILE\n");         return TWHILE; }
+"for"                   { printf("TFOR\n");           return TFOR; }
+"int"                   { printf("TTYPE INT\n");      return TTYPE;}
+"void"                  { printf("TTYPE VOID\n");     return TTYPE;}
+"start"                 { printf("TSTART\n");         return TSTART;}
+"finish"                { printf("TFINISH\n");        return TFINISH;}
+"goto"                  { printf("TGOTO\n");          return TGOTO;}
+"_Z12window_clearv"     { printf("WINDOW_CLEAR\n");   return WINDOW_CLEAR;}
+"_Z11check_eventv"      { printf("CHECK_EVENT\n");    return CHECK_EVENT;}
+"_Z5flushv"             { printf("FLUSH\n");          return FLUSH;}
+"_Z11init_windowjj"     { printf("INIT_WINDOW\n");    return INIT_WINDOW;}
+"put_pixel"             { printf("PUT_PIXEL\n");      return PUT_PIXEL;}
+"print"                 { printf("PRINT\n");          return PRINT;}
 
 [a-zA-Z_][a-zA-Z0-9_]*  { // identifier or array
                         printf("TIDENTIFIER %s\n", yytext);
